@@ -1,0 +1,32 @@
+<%- include('../header.ejs') %>
+
+<div class="container mt-3">
+  <h2>Thêm mới</h2>
+  <% if(typeof err!='undefined'){ %>
+  <% err.forEach((item)=>{ %>
+     <h4 style="color: red;"><%= item.message %></h4>
+  <% }) %>
+  <% } %>
+  <form action="/cate/luu" method="post" enctype="multipart/form-data">
+    <div class="mb-3 mt-3">
+      <label for="email">Name:</label>
+      <input type="text" class="form-control" placeholder="Enter name" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="">Chọn ảnh :</label>
+      <input type="file" name="hinhanh">
+    </div>
+    <div class="mb-3">
+      <label for="pwd">gia:</label>
+      <input type="number" class="form-control" placeholder="Enter Giá " name="gia">
+    </div>
+    <!-- <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div> -->
+    <a href="/cate" class="btn btn-danger">quay lại </a>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<%- include('../footer.ejs') %>

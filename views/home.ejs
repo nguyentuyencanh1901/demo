@@ -1,0 +1,25 @@
+<style>
+    .container{
+        margin-left: 700px;
+        font-size: 30px;
+       
+    }
+    h2{
+        color:red;
+    }
+</style>
+
+
+<div class="container" >
+    <h2>xin chào bạn đến với tôi</h2>
+    <h3>Tên Tôi là : <%=hoten.name%>
+    </h3>
+
+    <ul>
+        <%name.forEach((item)=>{%>
+            <li>
+                <%=item.name %>
+            </li>
+            <%})%>
+    </ul>
+</div>
